@@ -1,7 +1,7 @@
 package com.greendev.sistemmultimedia.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.greendev.sistemmultimedia.R
 import com.greendev.sistemmultimedia.util.CourseListUtil

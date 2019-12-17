@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="180dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgLoad"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@drawable/shape_card_dark"
+        android:scaleType="centerCrop"/>
+
+</LinearLayout>

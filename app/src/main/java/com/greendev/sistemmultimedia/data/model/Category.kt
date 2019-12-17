@@ -1,6 +1,6 @@
 package com.greendev.sistemmultimedia.data.model
 
-data class CourseCategory(
+data class Category(
     var courseName: String,
     var background: Int
 )

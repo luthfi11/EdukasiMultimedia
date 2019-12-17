@@ -3,6 +3,8 @@ package com.greendev.sistemmultimedia.data.model
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
+data class LessonResponse (var course: List<Lesson>)
+
 @Parcelize
 data class Lesson(
     var courseId: String?,
