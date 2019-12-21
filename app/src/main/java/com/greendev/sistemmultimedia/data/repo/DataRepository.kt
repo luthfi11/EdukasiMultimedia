@@ -4,6 +4,8 @@ import android.content.Context
 import com.google.gson.Gson
 import com.greendev.sistemmultimedia.data.model.Lesson
 import com.greendev.sistemmultimedia.data.model.LessonResponse
+import com.greendev.sistemmultimedia.data.model.Quiz
+import com.greendev.sistemmultimedia.data.model.QuizResponse
 
 class DataRepository {
 
@@ -13,7 +15,9 @@ class DataRepository {
         return lesson.course.filter { it.courseId == id}
     }
 
-    fun getQuiz() {
-
+    fun getQuiz(context: Context, id: String?): List<Quiz> {
+        val jsonFile = context.assets.open("quizTest.json").bufferedReader().use { it.readText() }
+        val quizResponse = Gson().fromJson(jsonFile, QuizResponse::class.java)
+        return quizResponse.quiz.filter { it.courseId == id}
     }
 }

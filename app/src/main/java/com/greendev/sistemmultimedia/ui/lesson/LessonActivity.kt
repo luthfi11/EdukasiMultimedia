@@ -1,11 +1,8 @@
 package com.greendev.sistemmultimedia.ui.lesson
 
 import android.annotation.SuppressLint
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
-import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -14,11 +11,10 @@ import com.bumptech.glide.Glide
 import com.greendev.sistemmultimedia.R
 import com.greendev.sistemmultimedia.data.model.Lesson
 import com.greendev.sistemmultimedia.data.repo.DataRepository
-import com.halilibo.bvpkotlin.BetterVideoPlayer
-import com.halilibo.bvpkotlin.VideoCallback
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerCallback
 import kotlinx.android.synthetic.main.activity_lesson.*
 import org.jetbrains.anko.sdk27.coroutines.onClick
-import org.jetbrains.anko.toast
 
 class LessonActivity : AppCompatActivity() {
 
@@ -36,6 +32,7 @@ class LessonActivity : AppCompatActivity() {
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_close)
 
         val courseName = intent?.getStringExtra("course")
+        toolbarLesson.title = courseName
 
         dataRepository = DataRepository()
         viewModel = ViewModelProviders.of(this).get(LessonViewModel::class.java)
@@ -43,19 +40,27 @@ class LessonActivity : AppCompatActivity() {
 
         viewModel.course.postValue(filteredLesson[i])
         viewModel.course.observe(this, Observer {
-            toolbarLesson.title = courseName
-            tvTitle.text = filteredLesson[i].title
-            tvContent.text = filteredLesson[i].content
-            tvPage.text = "${i + 1}/${filteredLesson.size}"
+            with(filteredLesson[i]) {
+                tvTitle.text = title
+                tvContent.text = content
+                tvPage.text = "${i + 1}/${filteredLesson.size}"
 
-            Glide.with(this).load(filteredLesson[i].imgLink)
-                .placeholder(android.R.color.darker_gray)
-                .into(imgContent)
-            videoLesson.setSource(Uri.parse("http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
-            videoLesson.setCallback(videoCallback)
+                Glide.with(applicationContext).load(imgLink)
+                    .placeholder(android.R.color.darker_gray)
+                    .into(imgContent)
 
-            btnPrev.isEnabled = i >= 1
-            btnNext.isEnabled = i != filteredLesson.size - 1
+                if (videoLink?.contains("v=")!!) {
+                    val link = videoLink?.split("v=")
+                    videoLesson.getYouTubePlayerWhenReady(object : YouTubePlayerCallback {
+                        override fun onYouTubePlayer(youTubePlayer: YouTubePlayer) {
+                            youTubePlayer.cueVideo(link!![1], 0f)
+                        }
+                    })
+                }
+
+                btnPrev.isEnabled = i >= 1
+                btnNext.isEnabled = i != filteredLesson.size - 1
+            }
         })
 
         initTransition()
@@ -66,7 +71,7 @@ class LessonActivity : AppCompatActivity() {
         btnPrev.onClick {
             if (i > 0) {
                 i--
-                showNewData(filteredLesson[i])
+                showNewData()
                 setTransition(R.anim.slide_in_left)
             }
         }
@@ -74,14 +79,14 @@ class LessonActivity : AppCompatActivity() {
         btnNext.onClick {
             if (i < filteredLesson.size - 1) {
                 i++
-                showNewData(filteredLesson[i])
+                showNewData()
                 setTransition(R.anim.slide_out_left)
             }
         }
     }
 
-    private fun showNewData(lesson: Lesson) {
-        viewModel.course.postValue(lesson)
+    private fun showNewData() {
+        viewModel.course.postValue(filteredLesson[i])
         scrollView2.smoothScrollTo(0, 0)
     }
 
@@ -104,49 +109,13 @@ class LessonActivity : AppCompatActivity() {
         imgContent.startAnimation(imgAnim)
     }
 
-    private val videoCallback = object : VideoCallback {
-
-        override fun onStarted(player: BetterVideoPlayer) {
-
-        }
-
-        override fun onPaused(player: BetterVideoPlayer) {
-
-        }
-
-        override fun onPreparing(player: BetterVideoPlayer) {
-            player.start()
-        }
-
-        override fun onPrepared(player: BetterVideoPlayer) {
-
-        }
-
-        override fun onBuffering(percent: Int) {
-
-        }
-
-        override fun onError(player: BetterVideoPlayer, e: Exception) {
-            e.printStackTrace()
-            Log.d("AAAAAAAAA", "${e.message}")
-        }
-
-        override fun onCompletion(player: BetterVideoPlayer) {
-
-        }
-
-        override fun onToggleControls(player: BetterVideoPlayer, isShowing: Boolean) {
-
-        }
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == android.R.id.home) finish()
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onPause() {
-        super.onPause()
-        videoLesson.pause()
+    override fun onDestroy() {
+        super.onDestroy()
+        videoLesson.release()
     }
 }

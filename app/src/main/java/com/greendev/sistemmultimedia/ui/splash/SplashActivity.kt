@@ -14,7 +14,6 @@ class SplashActivity : AppCompatActivity() {
 
     private val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
-
             startActivity<MainActivity>()
             finish()
         }

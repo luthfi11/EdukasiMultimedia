@@ -1,0 +1,48 @@
+{
+  "quiz": [
+    {
+      "courseId": "Fashion",
+      "questionNumber": "1",
+      "imgLink": "",
+      "question": "Dimanakah sentra penjualan tekstil dan Fashion tertua di Kota Bandung?",
+      "optionA": "Bandung Indah Plaza",
+      "optionB": "Paris Van Java",
+      "optionC": "Pasar Baru Trade Center",
+      "optionD": "Miko Mall",
+      "answer": "C"
+    },
+    {
+      "courseId": "Fashion",
+      "questionNumber": "2",
+      "imgLink": "http://urbanradiobandung.com/wp-content/uploads/2018/10/urban-radio-bandung-cibaduyut.jpg",
+      "question": "Patung tersebut sangat identik dengan tempat?",
+      "optionA": "Sentra Rajut Binong Jati",
+      "optionB": "Tegallega",
+      "optionC": "Simpang Lima",
+      "optionD": "Sentra Sepatu Cibaduyut",
+      "answer": "D"
+    },
+    {
+      "courseId": "Geografis",
+      "questionNumber": "",
+      "imgLink": "",
+      "question": "Kota Bandung dialiri oleh dua sungai utama, yaitu.........dan..........",
+      "optionA": "Sungai Cipamokolan dan Sungai Cidurian",
+      "optionB": "Sungai Cikapundung dan Sungai Citarum",
+      "optionC": "Sungai Ciparumpung dan Sungai Citarum",
+      "optionD": "Sungai Citepus dan Sungai Cinambo",
+      "answer": "B"
+    },
+    {
+      "courseId": "Geografis",
+      "questionNumber": "",
+      "imgLink": "",
+      "question": "Nama gunung yang berada di kecamatan Pangalengan adalah Gunung.......",
+      "optionA": "Kaledong",
+      "optionB": "Careuh",
+      "optionC": "Bedil",
+      "optionD": "Burangrang",
+      "answer": "C"
+    }
+  ]
+}

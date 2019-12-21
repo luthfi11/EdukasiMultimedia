@@ -89,7 +89,10 @@ class DashboardAdapter(private val category: List<Category>) :
                     dialog.dismiss()
                     startActivity<LessonActivity>("course" to courseName)
                 }
-                mDialogView.vQuiz.onClick { startActivity<QuizActivity>() }
+                mDialogView.vQuiz.onClick {
+                    dialog.dismiss()
+                    startActivity<QuizActivity>("course" to courseName)
+                }
             }
         }
 

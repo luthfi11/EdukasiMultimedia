@@ -3,10 +3,13 @@ package com.greendev.sistemmultimedia.data.model
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
+data class QuizResponse(var quiz: List<Quiz>)
+
 @Parcelize
 data class Quiz(
     var courseId: String?,
-    var questionNumber: Int?,
+    //var questionNumber: Int?,
+    var imgLink: String?,
     var question: String?,
     var optionA: String?,
     var optionB: String?,

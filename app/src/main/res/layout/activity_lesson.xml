@@ -79,10 +79,14 @@
                 tools:targetApi="o"
                 tools:text="@tools:sample/lorem/random" />
 
-            <com.halilibo.bvpkotlin.BetterVideoPlayer
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
                 android:id="@+id/videoLesson"
                 android:layout_width="match_parent"
-                android:layout_height="220dp" />
+                android:layout_height="wrap_content"
+                app:showYouTubeButton="false"
+                app:handleNetworkEvents="true"
+                app:showFullScreenButton="false"
+                app:autoPlay="false" />
 
         </LinearLayout>
 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="false" android:state_enabled="true">
+    <item android:state_enabled="true" android:state_pressed="false">
         <shape android:shape="rectangle">
             <solid android:color="@color/colorPrimary" />
             <corners android:radius="8dp" />
-            <padding android:left="10dp" android:right="10dp" android:bottom="2dp" />
+            <padding android:bottom="2dp" android:left="10dp" android:right="10dp" />
         </shape>
     </item>
 
-    <item android:state_pressed="true" android:state_enabled="true">
+    <item android:state_enabled="true" android:state_pressed="true">
         <shape android:shape="rectangle">
             <solid android:color="@color/colorPrimaryDark" />
             <corners android:radius="8dp" />

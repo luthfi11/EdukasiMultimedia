@@ -49,6 +49,7 @@ dependencies {
         exclude group: "androidx"
     }
 
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.3'
     implementation 'com.github.halilozercan:BetterVideoPlayer:kotlin-SNAPSHOT'
 
     testImplementation 'junit:junit:4.12'
