@@ -1,5 +1,6 @@
 package com.greendev.sistemmultimedia.ui.quiz
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.os.Bundle
 import android.view.MenuItem
@@ -14,10 +15,10 @@ import com.greendev.sistemmultimedia.R
 import com.greendev.sistemmultimedia.data.model.Quiz
 import com.greendev.sistemmultimedia.data.repo.DataRepository
 import kotlinx.android.synthetic.main.activity_quiz.*
-import kotlinx.android.synthetic.main.popup_true.*
+import kotlinx.android.synthetic.main.layout_popup_quiz.*
 import kotlinx.coroutines.delay
 import org.jetbrains.anko.sdk27.coroutines.onClick
-import org.jetbrains.anko.toast
+import org.jetbrains.anko.textColorResource
 
 class QuizActivity : AppCompatActivity() {
 
@@ -25,6 +26,7 @@ class QuizActivity : AppCompatActivity() {
     private lateinit var dataRepository: DataRepository
     private lateinit var filteredQuiz: List<Quiz>
     private lateinit var dialog: Dialog
+    private var score = 0
     private var i = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,11 +46,12 @@ class QuizActivity : AppCompatActivity() {
         viewModel.quiz.postValue(filteredQuiz[i])
         viewModel.quiz.observe(this, Observer {
             with(filteredQuiz[i]) {
-                if (imgLink != "")
+                if (imgLink != "") {
+                    imgQuiz.visibility = View.VISIBLE
                     Glide.with(applicationContext).load(imgLink).into(
                         imgQuiz
                     )
-                else imgQuiz.visibility = View.GONE
+                } else imgQuiz.visibility = View.GONE
 
                 tvQuestion.text = question
                 btnA.text = optionA
@@ -61,7 +64,7 @@ class QuizActivity : AppCompatActivity() {
         })
 
         viewModel.score.observe(this, Observer {
-            toast("Skor kamu $it")
+            if (i > 0) score = it
         })
 
         initDialog()
@@ -85,35 +88,38 @@ class QuizActivity : AppCompatActivity() {
     }
 
     private suspend fun showTrue() {
-        toast("Benar!")
         viewModel.addScore()
-        showPopup(R.drawable.ic_true)
-        showNewData(R.drawable.ic_true)
+        showPopup("+20", R.color.colorGreen, R.drawable.ic_true)
     }
 
     private suspend fun showWrong() {
-        toast("Salah!")
-        showPopup(R.drawable.ic_wrong)
-        showNewData(R.drawable.ic_wrong)
+        showPopup("+0", android.R.color.darker_gray, R.drawable.ic_wrong)
     }
 
-    private fun showNewData(icon: Int) {
+    private fun showNewData() {
         if (i < filteredQuiz.size - 1) {
             i++
             viewModel.quiz.postValue(filteredQuiz[i])
+        } else {
+            supportFragmentManager.beginTransaction().replace(android.R.id.content, QuizScoreFragment.newInstance(score)).commit()
         }
     }
 
-    private suspend fun showPopup(icon: Int) {
+    @SuppressLint("SetTextI18n")
+    private suspend fun showPopup(score: String, color: Int, icon: Int) {
         Glide.with(this).asGif().load(icon).into(dialog.imgTrue)
+        dialog.tvAddMin.text = score
+        dialog.tvAddMin.textColorResource = color
+        dialog.tvScore.text = "Skor Kamu : $score"
         dialog.show()
         delay(1000)
         dialog.dismiss()
+        showNewData()
     }
 
     private fun initDialog() {
         dialog = Dialog(this).apply {
-            setContentView(R.layout.popup_true)
+            setContentView(R.layout.layout_popup_quiz)
             window?.setBackgroundDrawableResource(android.R.color.transparent)
             setCancelable(false)
         }

@@ -12,17 +12,22 @@
         <item name="buttonStyle">@style/MyButton</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:itemBackground">@android:color/white</item>
         <item name="android:textColor">@android:color/black</item>
     </style>
 
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar" >
+        <item name="android:textViewStyle">@style/MyTextView</item>
+        <item name="buttonStyle">@style/MyButton</item>
+    </style>
+
     <style name="MyTextView" parent="android:Widget.TextView">
-        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">@font/barlow</item>
     </style>
 
     <style name="MyButton" parent="android:Widget.Button">
-        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:fontFamily">@font/barlow</item>
     </style>
 
 </resources>

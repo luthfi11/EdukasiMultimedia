@@ -3,6 +3,7 @@ package com.greendev.sistemmultimedia.ui.lesson
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -45,18 +46,22 @@ class LessonActivity : AppCompatActivity() {
                 tvContent.text = content
                 tvPage.text = "${i + 1}/${filteredLesson.size}"
 
-                Glide.with(applicationContext).load(imgLink)
-                    .placeholder(android.R.color.darker_gray)
-                    .into(imgContent)
+                if (imgLink != "") {
+                    imgContent.visibility = View.VISIBLE
+                    Glide.with(applicationContext).load(imgLink)
+                        .placeholder(android.R.color.darker_gray)
+                        .into(imgContent)
+                } else imgContent.visibility = View.GONE
 
-                if (videoLink?.contains("v=")!!) {
+                if ((videoLink?.contains("v=")!!) && (videoLink != "")) {
                     val link = videoLink?.split("v=")
+                    videoLesson.visibility = View.VISIBLE
                     videoLesson.getYouTubePlayerWhenReady(object : YouTubePlayerCallback {
                         override fun onYouTubePlayer(youTubePlayer: YouTubePlayer) {
                             youTubePlayer.cueVideo(link!![1], 0f)
                         }
                     })
-                }
+                } else videoLesson.visibility = View.GONE
 
                 btnPrev.isEnabled = i >= 1
                 btnNext.isEnabled = i != filteredLesson.size - 1

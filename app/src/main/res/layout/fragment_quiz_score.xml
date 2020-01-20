@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_gradient_blue"
+    tools:context=".ui.quiz.QuizScoreFragment">
+
+    <ImageView
+        android:id="@+id/imgResult"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:layout_marginTop="6dp"
+        tools:text="Skor Kamu : 80"/>
+
+    <Button
+        android:id="@+id/btnPlayAgain"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/shape_button_white"
+        android:text="@string/play_again"/>
+
+</LinearLayout>

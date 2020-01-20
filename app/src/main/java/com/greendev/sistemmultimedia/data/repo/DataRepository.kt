@@ -10,9 +10,9 @@ import com.greendev.sistemmultimedia.data.model.QuizResponse
 class DataRepository {
 
     fun getCourse(context: Context, id: String?): List<Lesson> {
-        val jsonFile = context.assets.open("courseTest.json").bufferedReader().use { it.readText() }
+        val jsonFile = context.assets.open("bandungCourse.json").bufferedReader().use { it.readText() }
         val lesson = Gson().fromJson(jsonFile, LessonResponse::class.java)
-        return lesson.course.filter { it.courseId == id}
+        return lesson.course.filter { it.courseId == id }
     }
 
     fun getQuiz(context: Context, id: String?): List<Quiz> {

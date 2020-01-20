@@ -40,21 +40,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <androidx.cardview.widget.CardView
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:id="@+id/videoLesson"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardBackgroundColor="@color/colorPrimary"
-                app:cardElevation="8dp"
-                app:contentPaddingBottom="10dp">
-
-                <ImageView
-                    android:id="@+id/imgContent"
-                    android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:contentDescription="@string/app_name"
-                    tools:src="@tools:sample/backgrounds/scenic" />
-
-            </androidx.cardview.widget.CardView>
+                app:autoPlay="false"
+                app:handleNetworkEvents="true"
+                app:showFullScreenButton="false"
+                app:showYouTubeButton="false" />
 
             <TextView
                 android:id="@+id/tvTitle"
@@ -79,14 +72,13 @@
                 tools:targetApi="o"
                 tools:text="@tools:sample/lorem/random" />
 
-            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-                android:id="@+id/videoLesson"
+
+            <ImageView
+                android:id="@+id/imgContent"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:showYouTubeButton="false"
-                app:handleNetworkEvents="true"
-                app:showFullScreenButton="false"
-                app:autoPlay="false" />
+                android:layout_height="220dp"
+                android:contentDescription="@string/app_name"
+                tools:src="@tools:sample/backgrounds/scenic" />
 
         </LinearLayout>
 
