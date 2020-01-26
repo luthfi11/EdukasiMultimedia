@@ -8,7 +8,6 @@ data class QuizResponse(var quiz: List<Quiz>)
 @Parcelize
 data class Quiz(
     var courseId: String?,
-    //var questionNumber: Int?,
     var imgLink: String?,
     var question: String?,
     var optionA: String?,

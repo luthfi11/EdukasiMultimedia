@@ -48,9 +48,7 @@ class QuizActivity : AppCompatActivity() {
             with(filteredQuiz[i]) {
                 if (imgLink != "") {
                     imgQuiz.visibility = View.VISIBLE
-                    Glide.with(applicationContext).load(imgLink).into(
-                        imgQuiz
-                    )
+                    Glide.with(applicationContext).load(imgLink).into(imgQuiz)
                 } else imgQuiz.visibility = View.GONE
 
                 tvQuestion.text = question
@@ -61,10 +59,6 @@ class QuizActivity : AppCompatActivity() {
 
                 choice(answer)
             }
-        })
-
-        viewModel.score.observe(this, Observer {
-            if (i > 0) score = it
         })
 
         initDialog()
@@ -82,14 +76,17 @@ class QuizActivity : AppCompatActivity() {
 
     private fun setAnswer(vararg btn: Button) {
         btn.forEachIndexed { index, button ->
-            if (index == 0) button.onClick { showTrue() }
+            if (index == 0) button.onClick {
+                showTrue()
+            }
             else button.onClick { showWrong() }
         }
     }
 
     private suspend fun showTrue() {
-        viewModel.addScore()
+        score += 20
         showPopup("+20", R.color.colorGreen, R.drawable.ic_true)
+
     }
 
     private suspend fun showWrong() {
@@ -101,7 +98,8 @@ class QuizActivity : AppCompatActivity() {
             i++
             viewModel.quiz.postValue(filteredQuiz[i])
         } else {
-            supportFragmentManager.beginTransaction().replace(android.R.id.content, QuizScoreFragment.newInstance(score)).commit()
+            supportFragmentManager.beginTransaction()
+                .replace(android.R.id.content, QuizScoreFragment.newInstance(score)).commit()
         }
     }
 
@@ -110,7 +108,7 @@ class QuizActivity : AppCompatActivity() {
         Glide.with(this).asGif().load(icon).into(dialog.imgTrue)
         dialog.tvAddMin.text = score
         dialog.tvAddMin.textColorResource = color
-        dialog.tvScore.text = "Skor Kamu : $score"
+        dialog.tvScore.text = "Skor Kamu : ${this.score}"
         dialog.show()
         delay(1000)
         dialog.dismiss()

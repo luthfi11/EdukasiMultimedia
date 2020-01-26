@@ -58,7 +58,7 @@ class LessonActivity : AppCompatActivity() {
                     videoLesson.visibility = View.VISIBLE
                     videoLesson.getYouTubePlayerWhenReady(object : YouTubePlayerCallback {
                         override fun onYouTubePlayer(youTubePlayer: YouTubePlayer) {
-                            youTubePlayer.cueVideo(link!![1], 0f)
+                            youTubePlayer.loadVideo(link!![1], 0f)
                         }
                     })
                 } else videoLesson.visibility = View.GONE

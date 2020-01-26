@@ -1,0 +1,304 @@
+{
+  "quiz": [
+    {
+      "courseId": "Fashion",
+      "imgLink": "",
+      "question": "Dimanakah sentra penjualan tekstil dan fashion tertua di Kota Bandung?",
+      "optionA": "Bandung Indah Plaza",
+      "optionB": "Paris Van Java",
+      "optionC": "Pasar Baru Trade Center",
+      "optionD": "Miko Mall",
+      "answer": "C"
+    },
+    {
+      "courseId": "Fashion",
+      "imgLink": "http://urbanradiobandung.com/wp-content/uploads/2018/10/urban-radio-bandung-cibaduyut.jpg",
+      "question": "Patung tersebut sangat identik dengan tempat?",
+      "optionA": "Sentra Rajut Binong Jati",
+      "optionB": "Tegallega",
+      "optionC": "Simpang Lima",
+      "optionD": "Sentra Sepatu Cibaduyut",
+      "answer": "D"
+    },
+    {
+      "courseId": "Fashion",
+      "imgLink": "",
+      "question": "Manakah diantara distro berikut yang tidak ada di Trunojoyo?",
+      "optionA": "Reborn Clothing",
+      "optionB": "Unkl347",
+      "optionC": "Eiger",
+      "optionD": "Teapot Bandung",
+      "answer": "C"
+    },
+    {
+      "courseId": "Fashion",
+      "imgLink": "",
+      "question": "Plaza Parahyangan berada di sekitar jalan?",
+      "optionA": "BuahBatu",
+      "optionB": "Dalem Kaum",
+      "optionC": "Dago",
+      "optionD": "Ujung Berung",
+      "answer": "B"
+    },
+    {
+      "courseId": "Fashion",
+      "imgLink": "",
+      "question": "Jika kita ingin berbelanja sweater rajut yang harganya terjangkau, dimanakah kita dapat mencarinya?",
+      "optionA": "Sentra Rajut Binong Jati",
+      "optionB": "Rumah Mode",
+      "optionC": "Cihampelas Walk",
+      "optionD": "Paris Van Java",
+      "answer": "A"
+    },
+    {
+      "courseId": "Geografis",
+      "imgLink": "",
+      "question": "Kota Bandung dialiri oleh dua sungai utama, yaitu . . . dan . . .",
+      "optionA": "Sungai Cipamokolan dan Sungai Cidurian",
+      "optionB": "Sungai Cikapundung dan Sungai Citarum",
+      "optionC": "Sungai Ciparumpung dan Sungai Citarum",
+      "optionD": "Sungai Citepus dan Sungai Cinambo",
+      "answer": "B"
+    },
+    {
+      "courseId": "Geografis",
+      "imgLink": "",
+      "question": "Nama gunung yang berada di kecamatan Pangalengan adalah Gunung . . .",
+      "optionA": "Kaledong",
+      "optionB": "Careuh",
+      "optionC": "Bedil",
+      "optionD": "Burangrang",
+      "answer": "C"
+    },
+    {
+      "courseId": "Geografis",
+      "imgLink": "",
+      "question": "Kota Bandung adalah kota metropolitan terbesar di Provinsi Jawa Barat, sekaligus menjadi ibu kota provinsi tersebut. Kota ini terletak . . . km sebelah tenggara Jakarta",
+      "optionA": 137,
+      "optionB": 140,
+      "optionC": 141,
+      "optionD": 138,
+      "answer": "B"
+    },
+    {
+      "courseId": "Geografis",
+      "imgLink": "",
+      "question": "Kota Bandung merupakan kota terbesar di wilayah Pulau . . . bagian . . .",
+      "optionA": "Sumatera, Utara",
+      "optionB": "Kalimantan, Selatan",
+      "optionC": "Jawa, Tengah",
+      "optionD": "Jawa, Selatan",
+      "answer": "D"
+    },
+    {
+      "courseId": "Geografis",
+      "imgLink": "",
+      "question": "Secara geografis, kota Bandung terletak di tengah-tengah provinsi jawa barat, serta berada pada ketinggian kurang . . . meter di atas permukaan laut.",
+      "optionA": 768,
+      "optionB": 700,
+      "optionC": 780,
+      "optionD": 789,
+      "answer": "A"
+    },
+    {
+      "courseId": "Seni dan Budaya",
+      "imgLink": "",
+      "question": "Tari Jaipong dari Jawa Barat diiringi dengan . . .",
+      "optionA": "Sinden",
+      "optionB": "Gamelan",
+      "optionC": "Rampak Gendang",
+      "optionD": "Orkestra",
+      "answer": "C"
+    },
+    {
+      "courseId": "Seni dan Budaya",
+      "imgLink": "",
+      "question": "Angklung dan gong termasuk jenis alat musik . . .",
+      "optionA": "Chordophone",
+      "optionB": "Idiophone",
+      "optionC": "Membranophone",
+      "optionD": "Aerophone",
+      "answer": "B"
+    },
+    {
+      "courseId": "Seni dan Budaya",
+      "imgLink": "https://2.bp.blogspot.com/-Dol7SXPC9CI/Vz-tp8Jxx2I/AAAAAAAAPkc/G65OekzolFsSl7BQghDd2xMenFbvbAhTACLcB/s320/Karinding.JPG",
+      "question": "Gambar tersebut merupakan jenis alat musik getar yang terbuat dari bambu, apa nama alat musik tersebut . . .",
+      "optionA": "Karinding",
+      "optionB": "Suling",
+      "optionC": "Rebab",
+      "optionD": "Kacapi",
+      "answer": "A"
+    },
+    {
+      "courseId": "Seni dan Budaya",
+      "imgLink": "",
+      "question": "Tarian berikut ini yang berasal dari Jawa Barat adalah . . .",
+      "optionA": "Reog Ponorogo",
+      "optionB": "Tari Kecak",
+      "optionC": "Breakdance",
+      "optionD": "Tari Jaipong",
+      "answer": "D"
+    },
+    {
+      "courseId": "Seni dan Budaya",
+      "imgLink": "",
+      "question": "Alat musik yang dimainkan dengan cara ditiup adalah . . .",
+      "optionA": "Biola",
+      "optionB": "Kendang",
+      "optionC": "Suling",
+      "optionD": "Kacapi",
+      "answer": "C"
+    },
+    {
+      "courseId": "Kuliner",
+      "imgLink": "https://cdn.idntimes.com/content-images/post/20191030/70486307-408206136561795-5108516469361799405-n-38c0ff810723e823285bd4bbca293473.jpg",
+      "question": "Apa nama makanan tersebut?",
+      "optionA": "Seblak",
+      "optionB": "Karedok",
+      "optionC": "Surabi",
+      "optionD": "Batagor",
+      "answer": "B"
+    },
+    {
+      "courseId": "Kuliner",
+      "imgLink": "https://cdn.idntimes.com/content-images/post/20191030/74660372-2862305163799417-8070253000489500061-n-07784696ba88f501e759cd2f93bff1a0.jpg",
+      "question": "Apa nama makanan tersebut?",
+      "optionA": "Batagor",
+      "optionB": "Seblak",
+      "optionC": "Pisang Bollen",
+      "optionD": "Ayam Bakar",
+      "answer": "A"
+    },
+    {
+      "courseId": "Kuliner",
+      "imgLink": "https://cdn-image.hipwee.com/wp-content/uploads/2019/04/hipwee-Lotek-Bu-Bagyo-848x566-750x422.jpg",
+      "question": "Apa nama makanan tersebut?",
+      "optionA": "Kupat Tahu",
+      "optionB": "Lontong",
+      "optionC": "Lotek",
+      "optionD": "Surabi",
+      "answer": "C"
+    },
+    {
+      "courseId": "Kuliner",
+      "imgLink": "https://cdn.idntimes.com/content-images/community/2018/04/surabi-radja-atsurabi-radja-cf0b3dc9de9f99b223723df76711f2a1_600x400.jpg",
+      "question": "Apa nama makanan tersebut?",
+      "optionA": "Surabi",
+      "optionB": "Seblak",
+      "optionC": "Lotek",
+      "optionD": "Gehu",
+      "answer": "A"
+    },
+    {
+      "courseId": "Kuliner",
+      "imgLink": "https://cdn.idntimes.com/content-images/post/20191030/18-1-tahususulembang-by-virnasari-e146cbe613c3d3575e3bbceeb60e7d92.jpg",
+      "question": "Apa nama makanan tersebut?",
+      "optionA": "Tempe Krispi",
+      "optionB": "Tahu Susu Bandung",
+      "optionC": "Goreng Pisang",
+      "optionD": "Perkedel",
+      "answer": "B"
+    },
+    {
+      "courseId": "Wisata",
+      "imgLink": "",
+      "question": "Gunung Tangkuban Perahu terletak di wilayah perbatasan . . . dan . . .",
+      "optionA": "Subang, Lembang",
+      "optionB": "Ciwidey, Pangalengan",
+      "optionC": "Cimahi, Padalarang",
+      "optionD": "Cilenyi, Sumedang",
+      "answer": "A"
+    },
+    {
+      "courseId": "Wisata",
+      "imgLink": "",
+      "question": "Jumlah jenis tanaman yang terdapat di Taman Hutan Raya Djuanda adalah sebanyak . . .",
+      "optionA": "Kurang dari 2500",
+      "optionB": "Lebih Dari 2500",
+      "optionC": "1500 Jenis",
+      "optionD": "1000 Jenis",
+      "answer": "B"
+    },
+    {
+      "courseId": "Wisata",
+      "imgLink": "",
+      "question": "Tempat wisata yang terletak di daerah lembang adalah . . .",
+      "optionA": "Floating Market",
+      "optionB": "Kawah Putih",
+      "optionC": "Trans Studio Bandung",
+      "optionD": "Situ Patenggang",
+      "answer": "A"
+    },
+    {
+      "courseId": "Wisata",
+      "imgLink": "https://i0.wp.com/ngetripkemana.com/wp-content/uploads/2019/02/dusun-bambu-lembang-novianto_cumplong.jpg",
+      "question": "Gambar tersebut adalah tempat wisata . . .",
+      "optionA": "Farm House, Lembang",
+      "optionB": "Kebun Binatang, Bandung",
+      "optionC": "Tangkuban Perahu, Lembang",
+      "optionD": "Dusun Bambu, Lembang",
+      "answer": "D"
+    },
+    {
+      "courseId": "Wisata",
+      "imgLink": "",
+      "question": "Sebelum bernama Trans Studio Bandung, tempat wisata tersebut bernama . . .",
+      "optionA": "Trans TV",
+      "optionB": "Trans 7",
+      "optionC": "Bandung Super Mall",
+      "optionD": "Bandung Studio Mall",
+      "answer": "C"
+    },
+    {
+      "courseId": "Sejarah",
+      "imgLink": "",
+      "question": "Kota Bandung secara resmi mendapat status gemeente (kota) dari Gubernur Jenderal J.B. van Heutsz pada tanggal . . .",
+      "optionA": "17 Maret 1907",
+      "optionB": "1 April 1906",
+      "optionC": "8 April 1909",
+      "optionD": "31 Januari 1906",
+      "answer": "B"
+    },
+    {
+      "courseId": "Sejarah",
+      "imgLink": "",
+      "question": "Salah satu julukan Kota Bandung adalah . . .",
+      "optionA": "Milan van Java",
+      "optionB": "Paris van Java",
+      "optionC": "Madrid van Java",
+      "optionD": "London van Java",
+      "answer": "B"
+    },
+    {
+      "courseId": "Sejarah",
+      "imgLink": "",
+      "question": "Bandung berasal dari kata . . .",
+      "optionA": "Bendung",
+      "optionB": "Bandang",
+      "optionC": "Banding",
+      "optionD": "Bundang",
+      "answer": "A"
+    },
+    {
+      "courseId": "Sejarah",
+      "imgLink": "",
+      "question": "Kapan kedatangan pasukan sekutu (Inggris) yang dipimpin Brigade MacDonald?",
+      "optionA": "17 Agustus 1946",
+      "optionB": "7 Januari 1947",
+      "optionC": "12 Oktober 1945",
+      "optionD": "6 Mei 1945",
+      "answer": "C"
+    },
+    {
+      "courseId": "Sejarah",
+      "imgLink": "",
+      "question": "Gedung petama yang diledakkan pada peristiwa Bandung Lautan Api adalah . . .",
+      "optionA": "Bank Rakyat",
+      "optionB": "Minimarket",
+      "optionC": "Rumah Dinas Gubernur",
+      "optionD": "Kantor Pemerintahan",
+      "answer": "A"
+    }
+  ]
+}

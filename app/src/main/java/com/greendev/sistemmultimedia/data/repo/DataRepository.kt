@@ -16,7 +16,7 @@ class DataRepository {
     }
 
     fun getQuiz(context: Context, id: String?): List<Quiz> {
-        val jsonFile = context.assets.open("quizTest.json").bufferedReader().use { it.readText() }
+        val jsonFile = context.assets.open("bandungQuiz.json").bufferedReader().use { it.readText() }
         val quizResponse = Gson().fromJson(jsonFile, QuizResponse::class.java)
         return quizResponse.quiz.filter { it.courseId == id}
     }
